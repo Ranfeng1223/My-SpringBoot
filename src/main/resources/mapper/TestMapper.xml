@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vv.cc.dao.TestDao">
+    <resultMap id="BaseResultMap" type="vv.cc.entity.TestPOJO">
+        <id column="user_id" jdbcType="VARCHAR" property="user_id"/>
+        <result column="account_status" jdbcType="INTEGER" property="account_status"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        user_id,account_status
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM user_set
+        WHERE user_id = #{id,jdbcType=VARCHAR}
+    </select>
+</mapper>
