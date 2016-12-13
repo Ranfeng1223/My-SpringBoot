@@ -18,7 +18,7 @@ public class MyControllerInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-       String userId = CacheUtil.pass(httpServletRequest,"13000000004",redisTemplate);
+       String userId = CacheUtil.pass(httpServletRequest,"13689243854",redisTemplate);
         if(userId == null){
             return false;
         }else {

@@ -15,8 +15,8 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource(locations = "classpath:application-bootpro.xml")
 public class Application implements EmbeddedServletContainerCustomizer {
 
-    public static void main(String[] args){
-        SpringApplication.run(Application.class,args);
+    public static void main(String[] args) throws Exception {
+       SpringApplication.run(Application.class,args);
     }
 
     @Override
